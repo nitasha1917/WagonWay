@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TripSync - Smart Travel Management</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="container">
+    <!-- Website Header -->
+    <header>
+        <h1>🚆 TripSync</h1>
+        <button id="logout-btn" onclick="logout()">Sign Out</button>
+    </header>
+
+    <!-- Register Form -->
+    <div id="register-section" class="card active">
+        <h2>Create Your Account</h2>
+        <input type="text" id="reg-username" placeholder="Enter your username"/>
+        <input type="email" id="reg-email" placeholder="Enter your email address"/>
+        <input type="password" id="reg-password" placeholder="Create a secure password"/>
+        <button onclick="register()">Create Account</button>
+        <p>Already have an account? <span onclick="showLogin()">Sign in here</span></p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-section" class="card">
+        <h2>Welcome Back</h2>
+        <input type="text" id="login-username" placeholder="Enter your username"/>
+        <input type="password" id="login-password" placeholder="Enter your password"/>
+        <button onclick="login()">Sign In</button>
+        <p>New to TripSync? <span onclick="showRegister()">Create an account</span></p>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard-section" class="card dashboard-card">
+        <h2>Travel Dashboard</h2>
+        <div class="dashboard-content">
+            <!-- Ticket Booking Form -->
+            <div class="ticket-form">
+                <label>Select Train:</label>
+                <select id="train-name"></select>
+
+                <label>Departure Station:</label>
+                <select id="source"></select>
+
+                <label>Arrival Station:</label>
+                <select id="destination"></select>
+
+                <label>Ticket Price:</label>
+                <input type="number" id="ticket-price" placeholder="Price will be calculated automatically" readonly/>
+
+                <button onclick="addTicket()">Reserve Ticket</button>
+            </div>
+
+            <!-- Ticket List -->
+            <div class="ticket-list-container">
+                <h3>Your Reserved Tickets</h3>
+                <ul id="ticket-list"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
