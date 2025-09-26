@@ -1,0 +1,16 @@
+com\database\config\MongoConfig.class
+com\database\config\SecurityConfig.class
+com\database\repositories\EventRepository.class
+com\database\controllers\UserController$UserStats.class
+com\database\services\UserService.class
+com\database\models\User.class
+com\database\controllers\UserController$PasswordUpdateRequest.class
+com\database\controllers\UserController.class
+com\database\models\Ticket.class
+com\database\repositories\UserRepository.class
+com\database\services\TicketService.class
+com\database\models\ApiResponse.class
+com\database\DatabaseServiceApplication.class
+com\database\models\Event.class
+com\database\repositories\TicketRepository.class
+com\database\services\EventService.class
