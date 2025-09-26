@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: database-service
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/ticket_reservation_db}
+      database: ticket_reservation_db
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:mySecretKey12345678901234567890}
+  expiration: ${JWT_EXPIRATION:86400000}
+
+logging:
+  level:
+    com.database: DEBUG
+    org.springframework.data.mongodb: INFO
